@@ -1,6 +1,9 @@
-type Props = {
-  numbers: [];
-};
-export const Display = ({ numbers }: Props) => {
-  return <span className="number">{numbers.join('')}</span>;
+import { useContext } from 'react';
+import { AppContext } from '../../context/context';
+
+export const Display = () => {
+  const {
+    phoneContext: { numbers },
+  } = useContext(AppContext);
+  return <span className="number">{numbers}</span>;
 };

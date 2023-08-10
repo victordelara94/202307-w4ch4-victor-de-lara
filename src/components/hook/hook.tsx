@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Key } from '../key/key';
-let displayNumbers = '';
+
 Key;
 export function usePhone() {
-  const [numbers, setNumbers] = useState<string>('');
+  const initialValue = '';
+  const [numbers, setNumbers] = useState<string>(initialValue);
 
   const add = (number: string) => {
-    displayNumbers += number;
-    setNumbers(displayNumbers);
+    setNumbers(numbers + number);
   };
   return { numbers, setNumbers, add };
 }
