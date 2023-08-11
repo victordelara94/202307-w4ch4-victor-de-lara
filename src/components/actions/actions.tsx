@@ -4,7 +4,7 @@ import { Display } from '../display/display';
 export const Actions = () => {
   return (
     <div className="actions">
-      <Display numbers={[]}></Display>
+      <Display></Display>
       <Action /*numbersLength={5}*/></Action>
     </div>
   );

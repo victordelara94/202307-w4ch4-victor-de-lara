@@ -6,7 +6,7 @@ export const Keyboard = () => {
     <div className="keyboard-container">
       <ol className="keyboard">
         {numbers.map((number) => (
-          <Key number={number}>{number}</Key>
+          <Key>{number}</Key>
         ))}
         <li>
           <button /*onClick={remove()}*/ className="key big">delete</button>

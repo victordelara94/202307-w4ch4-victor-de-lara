@@ -1,17 +1,16 @@
-import { ReactNode, useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../context/context';
 
 type Props = {
-  children: ReactNode;
-  number: string;
+  children: string;
 };
-export const Key = ({ children, number }: Props) => {
+export const Key = ({ children }: Props) => {
   const {
     phoneContext: { add },
   } = useContext(AppContext);
   return (
     <li>
-      <button onClick={() => add(number)} className="key">
+      <button onClick={() => add(children)} className="key">
         {children}
       </button>
     </li>
